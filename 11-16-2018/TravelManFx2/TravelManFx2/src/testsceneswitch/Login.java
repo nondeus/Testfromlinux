@@ -26,6 +26,10 @@ public class Login extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        
+        System.out.println("THIS IS A TEST FOR GIT 1");
+        
+        
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsceneswitch.UNi_CHOController">
+   <children>
+      <Pane prefHeight="461.0" prefWidth="732.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Label layoutX="145.0" layoutY="278.0" style="-fx-font-weight: bold;" text="Unidad">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="318.0" style="-fx-font-weight: bold;" text="Marca">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextFieldUnidadCU" editable="false" layoutX="219.0" layoutY="277.0" prefHeight="25.0" prefWidth="167.0" styleClass="TextBold" />
+            <TextField fx:id="TextFieldmarcaCU" editable="false" layoutX="218.0" layoutY="315.0" prefHeight="25.0" prefWidth="336.0" styleClass="TextBold" />
+            <Button fx:id="Button_UniChoferSave_U" layoutX="560.0" layoutY="398.0" mnemonicParsing="false" onAction="#SaveChoyUnibutton" prefHeight="25.0" prefWidth="28.0" styleClass="windows7-default" stylesheets="@StylesFx.css" />
+            <ComboBox fx:id="ComboChofer1" layoutX="218.0" layoutY="352.0" prefHeight="25.0" prefWidth="228.0" stylesheets="@StylesFx.css">
+               <styleClass>
+                  <String fx:value="windows7-default" />
+                  <String fx:value="TextBold" />
+               </styleClass></ComboBox>
+            <ComboBox fx:id="ComboChofer2" layoutX="218.0" layoutY="395.0" prefHeight="25.0" prefWidth="228.0" stylesheets="@StylesFx.css">
+               <styleClass>
+                  <String fx:value="windows7-default" />
+                  <String fx:value="TextBold" />
+               </styleClass></ComboBox>
+            <Label layoutX="145.0" layoutY="358.0" style="-fx-font-weight: bold;" text="Chofer 1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="401.0" style="-fx-font-weight: bold;" text="Chofer 2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="TableviewChoyUNI" layoutX="145.0" layoutY="39.0" onMousePressed="#Clickrowtable" prefHeight="200.0" prefWidth="443.0">
+              <columns>
+                <TableColumn fx:id="TableviewColumn1" prefWidth="121.0" text="C1" />
+                <TableColumn fx:id="TableviewColumn2" prefWidth="111.0" text="C2" />
+                  <TableColumn fx:id="TableviewColumn3" prefWidth="107.0" text="C2" />
+                  <TableColumn fx:id="TableviewColumn4" prefWidth="103.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

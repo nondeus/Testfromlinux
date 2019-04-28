@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="623.0" prefWidth="999.0" style="-fx-background-color: #3399ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsceneswitch.UnidadyChoferController">
+   <children>
+      <Pane layoutX="24.0" layoutY="72.0" prefHeight="531.0" prefWidth="951.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Pane layoutX="766.0" layoutY="45.0" prefHeight="58.0" prefWidth="161.0" styleClass="Pane" stylesheets="@StylesFx.css">
+               <children>
+                  <RadioButton fx:id="RChoferesUC" layoutX="9.0" layoutY="33.0" mnemonicParsing="false" onAction="#LoadPane2" prefHeight="17.0" prefWidth="92.0" styleClass="TextBold" text="Choferes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="UnidadChoferes" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="RUnidadesUC" layoutX="9.0" layoutY="6.0" mnemonicParsing="false" onAction="#LoadPane1" selected="true" styleClass="TextBold" text="Unidad" toggleGroup="$UnidadChoferes" />
+               </children>
+            </Pane>
+            <Pane fx:id="Pane_subscene" layoutX="16.0" layoutY="45.0" prefHeight="461.0" prefWidth="732.0" styleClass="Pane" stylesheets="@StylesFx.css" />
+         </children>
+      </Pane>
+      <Label layoutX="24.0" layoutY="8.0" prefHeight="26.0" prefWidth="119.0" style="-fx-font-weight: bold;" text="Unidad y Chofer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="38.0" prefHeight="0.0" prefWidth="958.0" styleClass="Separator" stylesheets="@StylesFx.css" />
+   </children>
+</AnchorPane>

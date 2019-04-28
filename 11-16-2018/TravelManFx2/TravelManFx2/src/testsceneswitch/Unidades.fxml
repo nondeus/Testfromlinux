@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ANPaneUnidad" prefHeight="461.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsceneswitch.UnidadesController">
+   <children>
+      <Pane fx:id="MainPaneU" prefHeight="461.0" prefWidth="732.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Label layoutX="88.0" layoutY="254.0" style="-fx-font-weight: bold;" text="Unidad">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="87.0" layoutY="297.0" style="-fx-font-weight: bold;" text="Marca">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="87.0" layoutY="335.0" style="-fx-font-weight: bold;" text="Estado">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="TextfieldUnidad_U" layoutX="150.0" layoutY="248.0" styleClass="TextBold" />
+            <TextField fx:id="TextfieldMarca_U" layoutX="150.0" layoutY="294.0" styleClass="TextBold" />
+            <RadioButton fx:id="Estado_Funcional_UR" layoutX="150.0" layoutY="337.0" mnemonicParsing="false" selected="true" styleClass="TextBold" text="Funcional">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Estado_UR" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="Estado_Taller_UR" layoutX="233.0" layoutY="337.0" mnemonicParsing="false" styleClass="TextBold" text="En Taller" toggleGroup="$Estado_UR" />
+            <Label layoutX="373.0" layoutY="254.0" style="-fx-font-weight: bold;" text="Tipo">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="374.0" layoutY="299.0" style="-fx-font-weight: bold;" text="Aire acondicionado">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="374.0" layoutY="335.0" style="-fx-font-weight: bold;" text="Cantidad de pasajeros">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="TextfieldPasajero_U" layoutX="546.0" layoutY="333.0" prefHeight="25.0" prefWidth="72.0" styleClass="TextBold" />
+            <RadioButton fx:id="Aire_A_UR_Si" layoutX="519.0" layoutY="299.0" mnemonicParsing="false" selected="true" styleClass="TextBold" text="Si">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Aire_a_U" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="Aire_A_UR_No" layoutX="564.0" layoutY="299.0" mnemonicParsing="false" styleClass="TextBold" text="No" toggleGroup="$Aire_a_U" />
+            <ComboBox fx:id="ComboUnidad" layoutX="418.0" layoutY="251.0" prefWidth="150.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <Button fx:id="ButtonSave_U" layoutX="615.0" layoutY="251.0" mnemonicParsing="false" onAction="#SaveUnidadB" prefHeight="25.0" prefWidth="25.0" styleClass="windows7-default" stylesheets="@StylesFx.css">
+               <tooltip>
+                  <Tooltip text="Añadir vehículo" />
+               </tooltip></Button>
+            <Button fx:id="ButtonEdite_U" layoutX="650.0" layoutY="251.0" mnemonicParsing="false" onAction="#EditUnidadB" prefHeight="25.0" prefWidth="25.0" styleClass="windows7-default" stylesheets="@StylesFx.css">
+               <tooltip>
+                  <Tooltip text="Actualizar datos" />
+               </tooltip></Button>
+            <TableView fx:id="TableviewUnidad" layoutX="84.0" layoutY="31.0" onMousePressed="#ClickRowTableUnidades" prefHeight="200.0" prefWidth="446.0">
+              <columns>
+                <TableColumn fx:id="TableColumn1" prefWidth="75.0" text="C1" />
+                <TableColumn fx:id="TableColumn2" prefWidth="75.0" text="C2" />
+                  <TableColumn fx:id="TableColumn3" prefWidth="75.0" text="C2" />
+                  <TableColumn fx:id="TableColumn4" prefWidth="75.0" text="C2" />
+                  <TableColumn fx:id="TableColumn5" prefWidth="75.0" text="C2" />
+                  <TableColumn fx:id="TableColumn6" prefWidth="75.0" text="C2" />
+                  <TableColumn fx:id="TableColumn7" prefWidth="75.0" text="C2" />
+                  <TableColumn fx:id="TableColumn8" prefWidth="75.0" text="C2" />
+                  <TableColumn fx:id="TableColumn9" prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <Label fx:id="LabelProvedor" layoutX="374.0" layoutY="378.0" style="-fx-font-weight: bold;" text="Nombre de Provedor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextfieldProvedor_U" layoutX="535.0" layoutY="377.0" styleClass="TextBold" />
+            <CheckBox fx:id="Bano" layoutX="88.0" layoutY="378.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Baño">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

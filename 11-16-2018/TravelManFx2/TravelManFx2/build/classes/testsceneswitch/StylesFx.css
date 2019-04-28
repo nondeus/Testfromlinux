@@ -1,0 +1,292 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 17, 2017, 9:47:35 AM
+    Author     : j_cas
+*/
+
+.Pane{
+  -fx-background-color:#cce6ff;
+-fx-border-color: black;
+
+  -fx-border-width:2;  
+}
+.CombbOx{
+    -fx-font-size: 12px;
+     -fx-background-color: 
+        #3c7fb1,
+        linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-font-weight:bold;
+    -fx-background-insets: 0,1,1;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 0 0 0 0;
+    -fx-text-fill: black;
+}
+
+
+
+.DatePickerStyle{
+    -fx-font-size: 12px;
+}
+.TextBold{
+   -fx-font-weight:bold;
+   -fx-font-size: 12px;
+    -fx-font-family: Arial, Helvetica, sans-serif;
+}
+
+.WBViewBorder
+{
+  
+-fx-border-color: black;
+
+  -fx-border-width: 2;  
+}
+
+.Separator { 
+-fx-border-style: solid;
+-fx-border-width: 1px;
+ -fx-border-width: 0 0 1 0; 
+ -fx-background-color:black;
+}
+
+
+.windows7-default {
+    -fx-background-color: 
+        #3c7fb1,
+        linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-font-weight:bold;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 3 10 3 10;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+   
+}
+.windows7Size2 {
+    -fx-background-color: 
+        #3c7fb1,
+        linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-font-weight:bold;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 3 5 3 5;
+    -fx-text-fill: black;
+    -fx-font-size: 12px;
+}
+
+#Button_Role:hover,#Button_UnidadChofe:hover,#Button_Reportes:hover,#B_Busqueda:hover,#Cancelar:hover,#Pending:hover,#Search_Empresa:hover,#Add_Empresa:hover,#Update_Empresa:hover,
+#Save_Case:hover,#Save_Conection:hover,#Login_Start:hover,#Clear_ConnectionSettings:hover,#Search_Users:hover,#Clear_User:hover,#Update_User:hover,#Admin_Users_Button:hover,
+#Buscar_Unidad:hover,#Buttonshow:hover,#ExcelButton:hover,#ButtonSave_U:hover,#ButtonEdite_U:hover,#Button_ChoferSave_U:hover,#Button_ChoferEdite_U:hover
+,#Button_UniChoferSave_U:hover,#CreateReport:hover,#ButtonAdd_Empresa:hover,#Update_Empresa1:hover,#ButtonAdd_Contacto:hover,#ButtonAdd_Encargado:hover,#Update_Contacto:hover,#Update_Encargado:hover{     
+   
+    -fx-background-color: 
+        white,
+        linear-gradient(black, #e8f5fc),
+        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+  -fx-text-fill:#3399ff;
+  -fx-font-weight:bold; 
+}
+
+#Button_Role:armed,#Button_UnidadChofe:armed,#Button_Reportes:armed,#B_Busqueda:armed,#Cancelar:armed,#Cancelar:armed,#Pending:armed,#Search_Empresa:armed,#Add_Empresa:armed,
+#Update_Empresa:armed,#Save_Case:armed,#Save_Conection:armed,#Login_Start:armed,#Clear_ConnectionSettings:armed,#Search_Users:armed,#Clear_User:armed,#Update_User:armed,
+#Admin_Users_Button:armed,#Buscar_Unidad:armed,#Buttonshow:armed,#ExcelButton:armed,#ButtonSave_U:armed,#ButtonEdite_U:armed,#Button_ChoferSave_U:armed
+,#Button_ChoferEdite_U:armed,#Button_UniChoferSave_U:armed,#CreateReport:armed,#ButtonAdd_Empresa:armed,#Update_Empresa1:armed,#ButtonAdd_Contacto:armed,#ButtonAdd_Encargado:armed,#Update_Contacto:armed,#Update_Encargado:armed{     
+ 
+   
+  -fx-text-fill:black;
+  -fx-font-weight:bold; 
+  /*-fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-90%) 0%, derive(-fx-color,-60%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-60%) 0%, derive(-fx-color,-35%) 50%, derive(-fx-color,-30%) 98%, derive(-fx-color,-50%) 100%),
+        linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, rgba(0,0,0,0.3) 100%);
+    -fx-background-insets: 0 0 -1 0, 0, 1, 1;*/
+   -fx-background-color: 
+        black,
+        linear-gradient(black, black),
+        linear-gradient(#eaf6fd 0%, white 49%, white 50%, #3399ff 100%);
+ 
+}   
+
+#Save_Conection,#Save_Case,#Update_User{
+    -fx-background-image: url("/testsceneswitch/Icons/Save.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center; 
+}
+#B_Busqueda,#Search_Users,#Search_Empresa,#Buscar_Unidad,#Buttonshow{
+    -fx-background-image: url("/testsceneswitch/Icons/search-128.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+
+#Cancelar,#Clear_ConnectionSettings,#Clear_User{
+   -fx-background-image: url("/testsceneswitch/Icons/cancel.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center; 
+}
+#ExcelButton{
+    -fx-background-image: url("/testsceneswitch/Icons/Excel_Logo.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center; 
+}
+
+#Pending{
+   -fx-background-image: url("/testsceneswitch/Icons/Pending5.png");
+   
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center; 
+}
+
+#Add_Empresa{
+    -fx-background-image: url("/testsceneswitch/Icons/plus-circled.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+#ButtonAdd_Empresa{
+    -fx-background-image: url("/testsceneswitch/Icons/plus-circled.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+
+#Update_Empresa{
+    -fx-background-image: url("/testsceneswitch/Icons/update2.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+#Update_Empresa1{
+    -fx-background-image: url("/testsceneswitch/Icons/update2.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+
+#Update_Contacto{
+     -fx-background-image: url("/testsceneswitch/Icons/update2.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+#Update_Encargado{
+     -fx-background-image: url("/testsceneswitch/Icons/update2.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    
+}
+#ButtonAdd_Contacto{
+     -fx-background-image: url("/testsceneswitch/Icons/plus-circled.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+#ButtonAdd_Encargado{
+     -fx-background-image: url("/testsceneswitch/Icons/plus-circled.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+#Comment {
+
+background-color: #99ccff;
+border-width:3px;  
+border-style:outset;
+padding: 5px ;
+word-wrap: break-word;
+ width: 100%;
+
+                }
+                
+
+.DatePickerStyle{
+    -fx-font-size: 12px;
+}
+.div{
+    -fx-background-color:  #ffffff;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+.trs{
+    
+     /*background-color:#a6a6a6;*/
+   /* position:fixed;*/
+   /* padding: 0% 13% 0% 13%;*/
+    background-color:#5cd65c;
+    /*text-align: center;*/
+   /* z-index: 1;*/
+    /*display: block;*/
+   /* margin-top: 0px;*/
+    /*top:30px;*/
+}
+
+
+#ButtonSave_U{
+    
+      -fx-background-image: url("/testsceneswitch/Icons/Save.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+
+#ButtonEdite_U{
+    -fx-background-image: url("/testsceneswitch/Icons/pen-checkbox-128.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    
+}
+
+#Button_ChoferSave_U{
+    
+      -fx-background-image: url("/testsceneswitch/Icons/Save.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+
+#Button_ChoferEdite_U{
+    -fx-background-image: url("/testsceneswitch/Icons/pen-checkbox-128.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    
+}
+
+
+
+#Button_UniChoferSave_U{
+    
+      -fx-background-image: url("/testsceneswitch/Icons/Save.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
+
+#Button_UniChoferEdite_U{
+    -fx-background-image: url("/testsceneswitch/Icons/pen-checkbox-128.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    
+}
+
+#CreateReport{
+    -fx-background-image: url("/testsceneswitch/Icons/Excel_Logo.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    
+}

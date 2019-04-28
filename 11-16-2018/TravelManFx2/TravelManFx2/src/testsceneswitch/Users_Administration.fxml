@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="445.0" style="-fx-background-color: #3399ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsceneswitch.Users_AdministrationController">
+   <children>
+      <Pane layoutX="14.0" layoutY="25.0" prefHeight="406.0" prefWidth="416.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <TextField fx:id="TextF_UserName" layoutX="27.0" layoutY="37.0" styleClass="TextBold" />
+            <Label layoutX="25.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Administración de usuarios" />
+            <Separator layoutX="25.0" layoutY="25.0" prefHeight="2.0" prefWidth="316.0" styleClass="Separator" stylesheets="@StylesFx.css" />
+            <Button fx:id="Search_Users" layoutX="192.0" layoutY="37.0" mnemonicParsing="false" onAction="#BuscarUsuarios" prefHeight="23.0" prefWidth="30.0" styleClass="windows7Size2">
+               <tooltip>
+                  <Tooltip text="Buscar usuarios" />
+               </tooltip>
+            </Button>
+            <TextField fx:id="Name_Text" layoutX="27.0" layoutY="220.0" prefHeight="23.0" prefWidth="203.0" promptText="Nombre" styleClass="TextBold">
+               <tooltip>
+                  <Tooltip text="Nombre completo" />
+               </tooltip></TextField>
+            <TextField fx:id="User_Text" layoutX="27.0" layoutY="255.0" prefHeight="23.0" prefWidth="203.0" promptText="Usuario" styleClass="TextBold">
+               <tooltip>
+                  <Tooltip text="Usuario" />
+               </tooltip></TextField>
+            <PasswordField fx:id="User_Pass" layoutX="27.0" layoutY="290.0" promptText="Contraseña" styleClass="TextBold">
+               <tooltip>
+                  <Tooltip text="Contraseña" />
+               </tooltip></PasswordField>
+            <PasswordField fx:id="Pass_Confirm" layoutX="27.0" layoutY="324.0" promptText="Confirmar" styleClass="TextBold">
+               <tooltip>
+                  <Tooltip text="Confirmar Contraseña" />
+               </tooltip></PasswordField>
+            <TextField fx:id="Email_Text" layoutX="27.0" layoutY="359.0" prefHeight="23.0" prefWidth="203.0" promptText="Correo electrónico" styleClass="TextBold">
+               <tooltip>
+                  <Tooltip text="Correo electrónico" />
+               </tooltip></TextField>
+            <CheckBox fx:id="Admin__Access" layoutX="253.0" layoutY="277.0" mnemonicParsing="false" styleClass="TextBold" text="Administrar Usuarios">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="Update_User" layoutX="357.0" layoutY="359.0" mnemonicParsing="false" onAction="#Save_Update_Users" prefHeight="23.0" prefWidth="30.0" styleClass="windows7Size2">
+               <tooltip>
+                  <Tooltip text="Guardar o actualizar" />
+               </tooltip>
+            </Button>
+            <CheckBox fx:id="Role_Access" layoutX="253.0" layoutY="297.0" mnemonicParsing="false" styleClass="TextBold" text="Role">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Unidad_Access" layoutX="253.0" layoutY="317.0" mnemonicParsing="false" styleClass="TextBold" text="Unidad &amp; Choferes">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Report_Access" layoutX="253.0" layoutY="337.0" mnemonicParsing="false" styleClass="TextBold" text="Reportes">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="Clear_User" layoutX="229.0" layoutY="37.0" mnemonicParsing="false" onAction="#ClearUserSelection" prefHeight="23.0" prefWidth="30.0" styleClass="windows7Size2">
+               <tooltip>
+                  <Tooltip text="Limpiar" />
+               </tooltip>
+            </Button>
+            <Label layoutX="258.0" layoutY="222.0" styleClass="TextBold" text="Accesos">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="253.0" layoutY="241.0" prefHeight="4.0" prefWidth="143.0" styleClass="Separator" stylesheets="@StylesFx.css" />
+            <TableView fx:id="User_Table" layoutX="25.0" layoutY="66.0" onMousePressed="#HandleTableSelection" prefHeight="145.0" prefWidth="371.0">
+                <placeholder>
+        <Label text="" />
+    </placeholder>
+              <columns>
+                <TableColumn fx:id="FirstColumn" editable="false" prefWidth="216.0" sortable="false" text="Nombre" />
+                <TableColumn fx:id="SecondColumn" editable="false" prefWidth="145.0" sortable="false" text="Usuario" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <CheckBox fx:id="Active_Account" layoutX="253.0" layoutY="256.0" mnemonicParsing="false" styleClass="TextBold" text="Cuenta activa">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

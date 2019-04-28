@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="940.0" prefWidth="1125.0" style="-fx-background-color: #3399ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsceneswitch.PrincipalController">
+   <children>
+      <Pane layoutX="22.0" layoutY="332.0" prefHeight="115.0" prefWidth="704.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Unidad" />
+            <Separator layoutX="14.0" layoutY="27.0" prefHeight="0.0" prefWidth="672.0" styleClass="Separator" stylesheets="@StylesFx.css" />
+            <Label layoutX="339.0" layoutY="76.0" styleClass="TextBold" text="Tipo:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="76.0" styleClass="TextBold" text="A/C:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="Aire_Si" layoutX="43.0" layoutY="75.0" mnemonicParsing="false" selected="true" styleClass="TextBold" text="si">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Aire_Group" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Aire_No" layoutX="81.0" layoutY="73.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="52.0" styleClass="TextBold" text="no" toggleGroup="$Aire_Group">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="16.0" layoutY="47.0" styleClass="TextBold" text="Cantidad de pasajeros:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="339.0" layoutY="50.0" styleClass="TextBold" text="Unidad:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Pax" layoutX="157.0" layoutY="45.0" prefHeight="25.0" prefWidth="42.0" styleClass="TextBold">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="Unidad_Selector" layoutX="402.0" layoutY="45.0" onAction="#SelectTipoBu" prefHeight="25.0" prefWidth="127.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <Button fx:id="Buscar_Unidad" layoutX="206.0" layoutY="46.0" mnemonicParsing="false" onAction="#BuscarUnidades" prefHeight="23.0" prefWidth="30.0" styleClass="windows7Size2" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="checkbano" layoutX="133.0" layoutY="75.0" mnemonicParsing="false" text="Baño" />
+            <TextField fx:id="TipoTransporteTExtfield" editable="false" layoutX="402.0" layoutY="71.0" onMouseReleased="#SelectTipoBu" prefHeight="25.0" prefWidth="86.0" styleClass="TextBold">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="22.0" layoutY="56.0" prefHeight="256.0" prefWidth="704.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <AnchorPane layoutX="16.0" layoutY="97.0" prefHeight="147.0" prefWidth="252.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="-67.0" style="-fx-font-weight: bold;" text="Contacto">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Tel_Contacto" layoutX="3.0" layoutY="84.0" promptText="Teléfono" styleClass="TextBold" stylesheets="@StylesFx.css">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="Email_Contacto" layoutX="3.0" layoutY="115.0" prefHeight="20.0" prefWidth="234.0" promptText="Email" styleClass="TextBold" stylesheets="@StylesFx.css">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Separator layoutX="3.0" layoutY="-45.0" prefHeight="4.0" prefWidth="241.0" styleClass="Separator" />
+                  <ComboBox fx:id="Nombre_ContactoCombo" editable="true" layoutX="3.0" layoutY="45.0" prefWidth="150.0" promptText="Nombre" />
+                  <Button fx:id="ButtonAdd_Contacto" layoutX="169.0" layoutY="44.0" mnemonicParsing="false" onAction="#AddContacto" prefHeight="25.0" prefWidth="30.0" styleClass="windows7Size2" stylesheets="@StylesFx.css" />
+                  <Button fx:id="Update_Contacto" layoutX="207.0" layoutY="44.0" mnemonicParsing="false" onAction="#Update_Contacto" prefHeight="26.0" prefWidth="30.0" styleClass="windows7Size2" stylesheets="@StylesFx.css">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Actualizar" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="367.0" layoutY="145.0" prefHeight="96.0" prefWidth="252.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Encargado">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Tel_Encargado" layoutX="4.0" layoutY="66.0" promptText="Teléfono" styleClass="TextBold">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Separator layoutX="3.0" layoutY="27.0" prefHeight="3.0" prefWidth="241.0" styleClass="Separator" />
+                  <ComboBox fx:id="Nombre_encargadoCombo" editable="true" layoutX="4.0" layoutY="36.0" prefWidth="150.0" promptText="Nombre" />
+                  <Button fx:id="ButtonAdd_Encargado" layoutX="172.0" layoutY="33.0" mnemonicParsing="false" onAction="#AddEncargado" prefHeight="26.0" prefWidth="31.0" styleClass="windows7Size2" stylesheets="@StylesFx.css" />
+                  <Button fx:id="Update_Encargado" layoutX="208.0" layoutY="33.0" mnemonicParsing="false" onAction="#Update_Encargado" prefHeight="26.0" prefWidth="30.0" styleClass="windows7Size2" stylesheets="@StylesFx.css">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Actualizar" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="14.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Cliente" />
+            <Separator layoutX="14.0" layoutY="24.0" prefHeight="3.0" prefWidth="672.0" styleClass="Separator" stylesheets="@StylesFx.css" />
+            <ComboBox fx:id="Name_EmpresaCombo" editable="true" layoutX="16.0" layoutY="63.0" onKeyPressed="#Empresakeypress" prefHeight="25.0" prefWidth="252.0" promptText="Empresa" />
+            <Button fx:id="ButtonAdd_Empresa" layoutX="289.0" layoutY="63.0" mnemonicParsing="false" onAction="#AddEmpresa_Encargado1" prefHeight="25.0" prefWidth="31.0" styleClass="windows7Size2" stylesheets="@StylesFx.css" />
+            <Button fx:id="Update_Empresa1" layoutX="328.0" layoutY="63.0" mnemonicParsing="false" onAction="#Update_Empresa" prefHeight="26.0" prefWidth="30.0" styleClass="windows7Size2" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Actualizar" />
+               </tooltip>
+            </Button>
+         </children>
+      </Pane>
+      <HBox layoutX="22.0" layoutY="14.0" prefHeight="34.0" prefWidth="431.0" stylesheets="@StylesFx.css">
+         <children>
+            <Button fx:id="Button_Role" mnemonicParsing="false" onAction="#Open_Role" styleClass="windows7-default" stylesheets="@StylesFx.css" text="Role">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Button_UnidadChofe" mnemonicParsing="false" onAction="#Open_UniChofer" styleClass="windows7-default" stylesheets="@StylesFx.css" text="Unidad &amp; Choferes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Button_Reportes" mnemonicParsing="false" onAction="#Open_Reports" styleClass="windows7-default" stylesheets="@StylesFx.css" text="Reportes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Pane layoutX="22.0" layoutY="470.0" prefHeight="147.0" prefWidth="704.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" style="-fx-font-weight: bold;" text="Conductor" />
+            <Separator layoutX="14.0" layoutY="23.0" prefHeight="3.0" prefWidth="672.0" styleClass="Separator" stylesheets="@StylesFx.css" />
+            <TextField fx:id="Cobrar_Conductor" layoutX="321.0" layoutY="37.0" prefHeight="25.0" prefWidth="364.0" styleClass="TextBold">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip fx:id="Cobrar_tip" text="Cobrar" />
+               </tooltip></TextField>
+            <TextField fx:id="Regreso_conductor" layoutX="74.0" layoutY="70.0" prefHeight="25.0" prefWidth="612.0" styleClass="TextBold">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip fx:id="Regreso_tip" text="Regreso" />
+               </tooltip></TextField>
+            <TextField fx:id="Notas_Conductor" layoutX="74.0" layoutY="103.0" prefHeight="25.0" prefWidth="612.0" styleClass="TextBold">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip fx:id="Notas_tip" text="Notas" />
+               </tooltip></TextField>
+            <Label layoutX="16.0" layoutY="74.0" styleClass="TextBold" text="Regreso:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label layoutX="16.0" layoutY="107.0" styleClass="TextBold" text="Notas:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label layoutX="275.0" layoutY="41.0" prefHeight="17.0" prefWidth="46.0" styleClass="TextBold" text="Cobrar:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Label layoutX="16.0" layoutY="41.0" styleClass="TextBold" text="Nombre:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <ComboBox fx:id="ComboChoferes" editable="true" layoutX="74.0" layoutY="36.0" onKeyPressed="#handleKeyPress" onTouchReleased="#Prueba" prefHeight="25.0" prefWidth="181.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="22.0" layoutY="633.0" prefHeight="290.0" prefWidth="704.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Destino" />
+            <Separator layoutX="14.0" layoutY="25.0" prefHeight="3.0" prefWidth="672.0" styleClass="Separator" stylesheets="@StylesFx.css" />
+            <Label layoutX="14.0" layoutY="45.0" styleClass="TextBold" text="Lugar de salida:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="70.0" styleClass="TextBold" text="Lugar de destino:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Lugar_Salida" layoutX="121.0" layoutY="38.0" prefHeight="25.0" prefWidth="567.0" styleClass="TextBold" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip fx:id="Salida_tip" text="Lugar de salida" />
+               </tooltip>
+            </TextField>
+            <TextField fx:id="Lugar_Destino" layoutX="121.0" layoutY="66.0" prefHeight="25.0" prefWidth="567.0" styleClass="TextBold" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip fx:id="Destino_tip" text="Lugar de destino" />
+               </tooltip>
+            </TextField>
+            <Label layoutX="14.0" layoutY="98.0" styleClass="TextBold" text="Precio:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="353.0" layoutY="98.0" prefHeight="17.0" prefWidth="69.0" styleClass="TextBold" text="Adelantos:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="159.0" styleClass="TextBold" text="Fecha de salida:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="Fecha_Salida" layoutX="121.0" layoutY="152.0" prefHeight="25.0" prefWidth="102.0" stylesheets="@StylesFx.css">
+               <styleClass>
+                  <String fx:value="DatePickerStyle" />
+                  <String fx:value="TextBold" />
+               </styleClass></DatePicker>
+            
+            <Label layoutX="353.0" layoutY="156.0" styleClass="TextBold" text="Fecha de regreso:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="Fecha_Regreso" layoutX="459.0" layoutY="152.0" prefHeight="25.0" prefWidth="102.0" stylesheets="@StylesFx.css">
+               <styleClass>
+                  <String fx:value="DatePickerStyle" />
+                  <String fx:value="TextBold" />
+               </styleClass></DatePicker>
+            <TextField fx:id="Precio" layoutX="120.0" layoutY="94.0" prefHeight="25.0" prefWidth="99.0" styleClass="TextBold" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="Tipo_Moneda" layoutX="225.0" layoutY="94.0" prefHeight="25.0" prefWidth="36.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <Label layoutX="14.0" layoutY="126.0" styleClass="TextBold" text="Formas de pago:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Metodo_Pago" layoutX="121.0" layoutY="122.0" prefHeight="25.0" prefWidth="155.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <RadioButton fx:id="Adelantos_si" layoutX="422.0" layoutY="98.0" mnemonicParsing="false" styleClass="TextBold" text="si">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Adelantos_Group" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Adelantos_no" layoutX="459.0" layoutY="96.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="52.0" styleClass="TextBold" text="no" toggleGroup="$Adelantos_Group">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="355.0" layoutY="126.0" prefHeight="17.0" prefWidth="69.0" styleClass="TextBold" text="Monto:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Monto_Adelantado" layoutX="400.0" layoutY="121.0" prefHeight="25.0" prefWidth="99.0" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="590.0" layoutY="98.0" prefHeight="17.0" prefWidth="83.0" styleClass="TextBold" text="Total a pagar:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="189.0" styleClass="TextBold" text="Hora de salida:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="353.0" layoutY="189.0" styleClass="TextBold" text="Hora de regreso:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="231.0" styleClass="TextBold" text="Recorrido:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Recorrido_text" layoutX="121.0" layoutY="226.0" prefHeight="25.0" prefWidth="567.0" styleClass="TextBold" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip fx:id="Recorrido_tip" text="Recorrido" />
+               </tooltip>
+            </TextField>
+            <ComboBox fx:id="Hora_Salida" layoutX="137.0" layoutY="185.0" prefHeight="25.0" prefWidth="58.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <ComboBox fx:id="Minuto_Salida" layoutX="217.0" layoutY="185.0" prefHeight="25.0" prefWidth="58.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <Label layoutX="122.0" layoutY="189.0" styleClass="TextBold" text="H:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="195.0" layoutY="190.0" styleClass="TextBold" text="M:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="AMPM_Salida" layoutX="279.0" layoutY="185.0" prefHeight="25.0" prefWidth="69.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <ComboBox fx:id="AMPM_Regreso" layoutX="615.0" layoutY="185.0" prefHeight="25.0" prefWidth="69.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <Label layoutX="536.0" layoutY="190.0" styleClass="TextBold" text="M:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="460.0" layoutY="189.0" styleClass="TextBold" text="H:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Minuto_Regreso" layoutX="553.0" layoutY="185.0" prefHeight="25.0" prefWidth="58.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <ComboBox fx:id="Hora_Regreso" layoutX="474.0" layoutY="185.0" prefHeight="25.0" prefWidth="58.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <TextField fx:id="monto_total" editable="false" layoutX="590.0" layoutY="121.0" prefHeight="25.0" prefWidth="99.0" style="-fx-border-color: black;" styleClass="TextBold" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="751.0" layoutY="16.0" prefHeight="161.0" prefWidth="355.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Búsqueda" />
+            <Label layoutX="25.0" layoutY="31.0" styleClass="TextBold" text="Nº de caso:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Case_Number" layoutX="21.0" layoutY="54.0" prefHeight="25.0" prefWidth="121.0" styleClass="TextBold" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="Pending" layoutX="110.0" layoutY="88.0" mnemonicParsing="false" onAction="#Search_Pendientes" prefHeight="23.0" prefWidth="30.0" styleClass="windows7Size2">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Buscar casos pendientes" />
+               </tooltip>
+            </Button>
+            <Button fx:id="Cancelar" layoutX="68.0" layoutY="88.0" mnemonicParsing="false" onAction="#ClearEverything" prefHeight="23.0" prefWidth="30.0" styleClass="windows7Size2">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Limpiar" />
+               </tooltip>
+            </Button>
+            <Button fx:id="B_Busqueda" layoutX="25.0" layoutY="88.0" mnemonicParsing="false" onAction="#FindCaseParameters1" prefHeight="23.0" prefWidth="30.0" styleClass="windows7Size2">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Buscar caso" />
+               </tooltip>
+            </Button>
+            <ComboBox fx:id="search_Case" editable="true" layoutX="190.0" layoutY="122.0" onKeyReleased="#handleKeyPressempressas" prefWidth="150.0">
+               <tooltip>
+                  <Tooltip text="Nombre de la empresa" />
+               </tooltip></ComboBox>
+            <DatePicker fx:id="dateScase" layoutX="191.0" layoutY="26.0" onTouchReleased="#tooltipdatesearchcase" prefHeight="25.0" prefWidth="115.0">
+               <tooltip>
+                  <Tooltip fx:id="tooltipdateS" text="Desde" />
+               </tooltip></DatePicker>
+            <DatePicker fx:id="dateEcase" layoutX="191.0" layoutY="54.0" prefHeight="25.0" prefWidth="115.0">
+               <tooltip>
+                  <Tooltip fx:id="tooltipdateE" text="Hasta" />
+               </tooltip></DatePicker>
+            <Label layoutX="191.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Por empresa" />
+            <ComboBox fx:id="Estado_Box1" layoutX="191.0" layoutY="87.0" onAction="#ClearSearchEmpresaXEstado" prefHeight="25.0" prefWidth="146.0" styleClass="CombbOx" stylesheets="@StylesFx.css">
+               <tooltip>
+                  <Tooltip text="Seleccione un estado" />
+               </tooltip>
+            </ComboBox>
+         </children>
+      </Pane>
+      <Pane layoutX="751.0" layoutY="190.0" prefHeight="430.0" prefWidth="355.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <WebView fx:id="Webview_Comments" layoutX="14.0" layoutY="42.0" prefHeight="359.0" prefWidth="324.0" />
+            <Label layoutX="14.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Info" />
+            <Separator layoutX="16.0" layoutY="24.0" prefHeight="3.0" prefWidth="332.0" styleClass="Separator" />
+         </children>
+      </Pane>
+      <Pane layoutX="751.0" layoutY="633.0" prefHeight="290.0" prefWidth="355.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <TextArea fx:id="Comentarios" layoutX="9.0" layoutY="31.0" prefHeight="138.0" prefWidth="338.0">
+               <styleClass>
+                  <String fx:value="WBViewBorder" />
+                  <String fx:value="TextBold" />
+               </styleClass></TextArea>
+            <Label layoutX="30.0" layoutY="185.0" styleClass="TextBold" text="Estado:">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Estado_Box" layoutX="140.0" layoutY="180.0" prefHeight="25.0" prefWidth="146.0" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <DatePicker fx:id="Case_estate_date" layoutX="140.0" layoutY="216.0" prefHeight="25.0" prefWidth="108.0" promptText="Fecha" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <Button fx:id="Save_Case" layoutX="256.0" layoutY="250.0" mnemonicParsing="false" onAction="#Save_Update_Case" prefHeight="23.0" prefWidth="30.0" styleClass="windows7-default" stylesheets="@StylesFx.css">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="8.0" layoutY="4.0" style="-fx-font-weight: bold;" text="Comentarios" />
+            <Separator layoutX="9.0" layoutY="24.0" prefHeight="3.0" prefWidth="332.0" styleClass="Separator" />
+            <DatePicker fx:id="Fecha_Maxima" layoutX="140.0" layoutY="250.0" prefHeight="25.0" prefWidth="108.0" promptText="Fecha max" styleClass="CombbOx" stylesheets="@StylesFx.css" />
+            <Label layoutX="34.0" layoutY="255.0" styleClass="TextBold" text="Fecha máxima">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Button fx:id="Admin_Users_Button" layoutX="569.0" layoutY="16.0" mnemonicParsing="false" onAction="#Open_User_Admin" styleClass="windows7-default" stylesheets="@StylesFx.css" text="Administrar usuarios">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

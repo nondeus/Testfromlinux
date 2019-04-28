@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="MainWIndows" prefHeight="295.0" prefWidth="442.0" style="-fx-background-color: #3399ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsceneswitch.ReportsController">
+   <children>
+      <Pane layoutX="28.0" layoutY="32.0" prefHeight="229.0" prefWidth="383.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <DatePicker fx:id="Desde" layoutX="42.0" layoutY="75.0" prefHeight="25.0" prefWidth="108.0" promptText="Desde" styleClass="DatePickerStyle" />
+            <DatePicker fx:id="Hasta" layoutX="42.0" layoutY="106.0" prefHeight="25.0" prefWidth="108.0" promptText="Hasta" styleClass="DatePickerStyle" />
+            <Label layoutX="42.0" layoutY="29.0" styleClass="TextBold" text="Reportes" />
+            <Separator layoutX="42.0" layoutY="57.0" prefHeight="0.0" prefWidth="302.0" styleClass="Separator" />
+            <RadioButton fx:id="Unidades" layoutX="170.0" layoutY="80.0" mnemonicParsing="false" selected="true" styleClass="TextBold" text="Uso de unidades">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Report_Groupr" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Pendiente" layoutX="170.0" layoutY="98.0" mnemonicParsing="false" styleClass="TextBold" text="Pendientes por cobrar" toggleGroup="$Report_Groupr" />
+            <RadioButton fx:id="Porcliente" layoutX="170.0" layoutY="117.0" mnemonicParsing="false" styleClass="TextBold" text="Consumo por cliente" toggleGroup="$Report_Groupr" />
+            <RadioButton fx:id="Mensual" layoutX="170.0" layoutY="136.0" mnemonicParsing="false" styleClass="TextBold" text="Consumo mensual" toggleGroup="$Report_Groupr" />
+            <Button fx:id="CreateReport" layoutX="278.0" layoutY="175.0" mnemonicParsing="false" onAction="#GenerateReports" prefHeight="23.0" prefWidth="33.0" styleClass="windows7Size2" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

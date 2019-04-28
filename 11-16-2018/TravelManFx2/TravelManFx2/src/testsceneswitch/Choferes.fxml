@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsceneswitch.ChoferesController">
+   <children>
+      <Pane prefHeight="461.0" prefWidth="732.0" styleClass="Pane" stylesheets="@StylesFx.css">
+         <children>
+            <Label layoutX="140.0" layoutY="252.0" style="-fx-font-weight: bold;" text="Nombre">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="286.0" style="-fx-font-weight: bold;" text="Celular">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="321.0" style="-fx-font-weight: bold;" text="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextFieldNameC" layoutX="229.0" layoutY="250.0" prefHeight="25.0" prefWidth="336.0" styleClass="TextBold" />
+            <TextField fx:id="TextFieldCelularC" layoutX="229.0" layoutY="285.0" styleClass="TextBold" />
+            <TextField fx:id="TextFieldCorreoC" layoutX="229.0" layoutY="319.0" prefHeight="25.0" prefWidth="336.0" styleClass="TextBold" />
+            <Button fx:id="Button_ChoferSave_U" layoutX="587.0" layoutY="250.0" mnemonicParsing="false" onAction="#SaveChofferbutton" prefHeight="25.0" prefWidth="28.0" styleClass="windows7-default" stylesheets="@StylesFx.css">
+               <tooltip>
+                  <Tooltip text="Añadir chofer" />
+               </tooltip></Button>
+            <Button fx:id="Button_ChoferEdite_U" layoutX="629.0" layoutY="250.0" mnemonicParsing="false" onAction="#EditedChoferbutton" prefHeight="25.0" prefWidth="28.0" styleClass="windows7-default">
+               <tooltip>
+                  <Tooltip text="Actualizar datos" />
+               </tooltip></Button>
+            <TableView fx:id="TableviewChofer" layoutX="141.0" layoutY="31.0" onMousePressed="#ClickrowTable" prefHeight="200.0" prefWidth="436.0">
+              <columns>
+                <TableColumn fx:id="Tablecolumn1" prefWidth="143.0" text="C1" />
+                <TableColumn fx:id="Tablecolumn2" prefWidth="141.0" text="C2" />
+                  <TableColumn fx:id="Tablecolumn3" prefWidth="139.0" text="C2" />
+                  <TableColumn fx:id="Tablecolumn4" prefWidth="139.0" text="C2" />
+                  <TableColumn fx:id="Tablecolumn5" prefWidth="139.0" text="C2" />
+              </columns>
+            </TableView>
+            <CheckBox fx:id="DispobibleCH" layoutX="576.0" layoutY="323.0" mnemonicParsing="false" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Disponible">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
